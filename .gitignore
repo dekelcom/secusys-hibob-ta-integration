@@ -1,0 +1,9 @@
+# Local runtime output & secrets — never commit these
+*.log
+.env
+__pycache__/
+*.pyc
+
+# Local working folders for the nightly file (if you run it from the repo dir)
+/incoming/
+/done/
