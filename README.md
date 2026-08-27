@@ -20,9 +20,41 @@ Bob, and creates the attendance entries using Bob's official APIs:
 
 | File | What it is |
 |------|------------|
-| `secusys_to_hibob.py` | The program. You don't edit it. |
+| `secusys_to_hibob.py` | The program that sends attendance to Bob. You don't edit it. |
 | `sample_extract.txt` | An example Secusys file, for a safe first test. |
+| `secusys_export.sql` | **Secusys side** — SQL that produces the nightly file (only needed if Secusys isn't already exporting one). |
+| `run_secusys_export.bat` | **Secusys side** — runs that SQL and writes the timestamped `time_*.txt` file. |
 | `README.md` | This guide. |
+
+There are two sides. If Secusys **already** drops a nightly punch file, you only
+need the Bob side (Steps 1–5 below). If it **doesn't**, first set up the export
+using the section right below.
+
+---
+
+## Secusys side — generate the nightly file (only if you don't have one)
+
+Secusys stores punches in its SQL Server database. `secusys_export.sql` reads them
+and, **for each employee each day, takes the first punch as the entrance and the
+last punch as the exit** (the standard "first in / last out" shift), writing them
+in the exact format the Bob loader reads.
+
+1. Open `secusys_export.sql` and set the three `{{PLACEHOLDER}}` values to your real
+   Secusys punches table and its employee-number and timestamp columns (a DBA does
+   this once). Run it in SSMS to eyeball the output — you should see lines like
+   `0000003680000012-08-260010913B`.
+2. Open `run_secusys_export.bat` and set `SERVER`, `DATABASE`, and `OUTDIR`. It runs
+   the query and writes a timestamped `time_DD_MM_YYYY_HH.MM.SS.txt` into `OUTDIR`.
+3. Schedule `run_secusys_export.bat` in Task Scheduler nightly (~02:00).
+
+Prefer a one-liner instead of the .bat? This does the same thing:
+```
+sqlcmd -S YOUR_SQL_SERVER -d Secusys -E -i secusys_export.sql -h -1 -W -o time_export.txt
+```
+
+Point the Bob loader's `--inbox` (Step 5) at that same `OUTDIR`, and the two sides
+connect. (If the Bob loader runs on a different machine, send the file across with
+your existing SFTP job.)
 
 ---
 
