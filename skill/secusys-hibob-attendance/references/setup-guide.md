@@ -16,16 +16,6 @@ Bob, and creates the attendance entries using Bob's official APIs:
 
 ---
 
-## Get it
-
-- **Download everything:** on the repo page, click **Code → Download ZIP**.
-- **Optional — install as a Claude Skill:** grab **`secusys-hibob-attendance.skill`**
-  (or the `skill/` folder). If your team uses Claude, install it and Claude will walk
-  you through the setup interactively — you just provide your variables. See
-  `skill/secusys-hibob-attendance/SKILL.md`.
-
----
-
 ## What's in this folder
 
 | File | What it is |
