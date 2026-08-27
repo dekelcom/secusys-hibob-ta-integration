@@ -1,5 +1,10 @@
 # Secusys → HiBob (Bob) — Attendance sync
 
+> ⚠️ **Please note:** This is **not an official or certified HiBob integration**.
+> It's shared purely as **guidelines / a reference implementation** to show how to
+> import attendance punches into Bob via the public API, to help your IT team build
+> the connection. Please review and test it in a sandbox before using it in production.
+
 This package pushes daily **clock-in / clock-out data from Secusys into HiBob**,
 so attendance appears in Bob automatically for approval and payroll — no manual
 typing.
