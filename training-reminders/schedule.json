@@ -1,0 +1,26 @@
+{
+  "_comment": "Monthly training schedule for the youth sports group, transcribed from the coach's WhatsApp image. Update this file (and re-run/redeploy) every time a new month's schedule photo is posted in the group.",
+  "group_name": "אימונים קבוצת קסם צעירים ספטמבר",
+  "month": "2026-09",
+  "sessions": [
+    { "date": "2026-09-06", "day": "ראשון",  "time": "18:00-19:00", "activity": "ריצה",              "location": "חניית כורכר",              "coach": "פאולה" },
+    { "date": "2026-09-07", "day": "שני",    "time": "20:00-21:00", "activity": "שחייה",             "location": "בריכת שדרות",              "coach": "יהודית" },
+    { "date": "2026-09-09", "day": "רביעי",  "time": "18:30-19:30", "activity": "רכיבה",             "location": "נחל עוז",                  "coach": "יהודית/צור" },
+    { "date": "2026-09-10", "day": "חמישי",  "time": "18:00-19:00", "activity": "שחייה",             "location": "בריכת שדרות",              "coach": "יהודית" },
+    { "date": "2026-09-11", "day": "שישי",   "time": "06:30-08:00", "activity": "רכיבה/שחייה משולב", "location": "נחל עוז/אשקלון",           "coach": "יהודית" },
+    { "date": "2026-09-14", "day": "שני",    "time": "20:00-21:00", "activity": "שחייה",             "location": "בריכת שדרות",              "coach": "יהודית" },
+    { "date": "2026-09-16", "day": "רביעי",  "time": "18:30-19:30", "activity": "רכיבה",             "location": "נחל עוז",                  "coach": "יהודית/צור" },
+    { "date": "2026-09-17", "day": "חמישי",  "time": "18:00-19:00", "activity": "שחייה",             "location": "בריכת שדרות",              "coach": "יהודית" },
+    { "date": "2026-09-18", "day": "שישי",   "time": "06:30-08:00", "activity": "רכיבה/שחייה משולב", "location": "נחל עוז/אשקלון",           "coach": "יהודית" },
+    { "date": "2026-09-23", "day": "רביעי",  "time": "18:30-19:30", "activity": "רכיבה",             "location": "נחל עוז",                  "coach": "יהודית/צור" },
+    { "date": "2026-09-24", "day": "חמישי",  "time": "18:00-19:00", "activity": "שחייה",             "location": "בריכת שדרות",              "coach": "יהודית" },
+    { "date": "2026-09-25", "day": "שישי",   "time": "06:30-08:00", "activity": "רכיבה/שחייה משולב", "location": "נחל עוז/אשקלון",           "coach": "יהודית" },
+    { "date": "2026-09-27", "day": "ראשון",  "time": "18:00-19:00", "activity": "ריצה",              "location": "יעודכן",                   "coach": "פאולה" },
+    { "date": "2026-09-28", "day": "שני",    "time": "20:00-21:00", "activity": "שחייה",             "location": "בריכת שדרות",              "coach": "אמיתי" },
+    { "date": "2026-09-30", "day": "רביעי",  "time": null,          "activity": "רכיבה",             "location": null,                       "coach": null, "note": "אימון עצמאי" }
+  ],
+  "non_training_days": [
+    { "dates": ["2026-09-12", "2026-09-13"], "label": "ראש השנה" },
+    { "dates": ["2026-09-20", "2026-09-21"], "label": "יום כיפור" }
+  ]
+}
