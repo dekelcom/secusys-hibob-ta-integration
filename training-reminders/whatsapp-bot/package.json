@@ -1,0 +1,16 @@
+{
+  "name": "training-reminder-whatsapp-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sends the evening-before training reminder straight into the WhatsApp group, via an unofficial linked-device connection (Baileys).",
+  "type": "commonjs",
+  "scripts": {
+    "list-groups": "node list-groups.js",
+    "send": "node send-reminder.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.9",
+    "pino": "^9.5.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
